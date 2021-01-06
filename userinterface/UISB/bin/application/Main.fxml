@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <center>
+      <ImageView fx:id="imageview" fitHeight="356.0" fitWidth="440.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <image>
+            <Image url="@TBTv1(1).jpg" />
+         </image>
+      </ImageView>
+   </center>
+   <right>
+      <VBox prefHeight="294.0" prefWidth="335.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="220.0">
+               <children>
+                  <Label text="Information">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="200.0" />
+                  <Label text="Image number" />
+                  <Separator prefWidth="200.0" />
+                  <Label text="From Try number" />
+                  <Separator prefWidth="200.0" />
+                  <Label text="From Campaign number" />
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="220.0">
+               <children>
+                  <Separator prefWidth="200.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="12.0" />
+                     </padding>
+                  </Separator>
+                  <TextField editable="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" />
+                  <Separator prefWidth="200.0" />
+                  <TextField editable="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" />
+                  <Separator prefWidth="200.0" />
+                  <TextField editable="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" />
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="72.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar layoutX="1.0" layoutY="16.0" prefHeight="67.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <Button fx:id="importbtn" mnemonicParsing="false" text="Import" />
+                  <Separator orientation="VERTICAL" prefHeight="50.0" prefWidth="2.0" />
+                  <Button fx:id="runbtn" mnemonicParsing="false" text="Run" />
+                  <Separator orientation="VERTICAL" prefHeight="50.0" />
+                  <Button fx:id="seebtn" mnemonicParsing="false" text="See Results" />
+                  <Separator orientation="VERTICAL" prefHeight="50.0" />
+                  <Button fx:id="exportbtn" mnemonicParsing="false" text="Export" />
+                  <Separator orientation="VERTICAL" prefHeight="50.0" />
+                  <Button fx:id="managebtn" mnemonicParsing="false" onAction="#manageButtonPushed" text="Manage" />
+                  <AnchorPane prefHeight="57.0" prefWidth="446.0">
+                     <children>
+                        <Button fx:id="exitbtn" layoutX="387.0" layoutY="16.0" mnemonicParsing="false" onAction="#exitButtonPushed" prefHeight="25.0" prefWidth="63.0" text="Exit" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </ToolBar>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
